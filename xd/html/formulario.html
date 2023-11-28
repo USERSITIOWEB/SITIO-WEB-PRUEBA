@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo1.png">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <title>formulario</title>
+    <script>
+        function redireccionar() {
+            window.location.href = "contactar.html";
+        }
+        
+        function mostrarPagina2() {
+            document.getElementById('pagina1').style.display = 'none';
+            document.getElementById('pagina2').style.display = 'block';
+        }
+    
+        function mostrarPagina1() {
+            document.getElementById('pagina2').style.display = 'none';
+            document.getElementById('pagina1').style.display = 'block';
+        }
+    
+        function mostrarPagina3() {
+            document.getElementById('pagina2').style.display = 'none';
+            document.getElementById('pagina3').style.display = 'block';
+        }
+    
+        function mostrarPagina2Anterior() {
+            document.getElementById('pagina3').style.display = 'none';
+            document.getElementById('pagina2').style.display = 'block';
+        }
+    
+        function mostrarPagina4() {
+            document.getElementById('pagina3').style.display = 'none';
+            document.getElementById('pagina4').style.display = 'block';
+
+            
+            var patente = document.getElementById('patente').value;
+            var marca = document.getElementById('marca').value;
+            var vin = document.getElementById('vin').value;
+            var modelo = document.getElementById('modelo').value;
+            var version = document.getElementById('version').value;
+            var año = document.getElementById('año').value;
+            var kilometros = document.getElementById('kilometros').value;
+            var mantenimiento = document.getElementById('mantenimiento').value;
+            var problema_adicional = document.getElementById('problema_adicional').value;
+            var nombre = document.getElementById('Nombres').value;
+            var apellido_p = document.getElementById('apellido_p').value;
+            var apellido_m = document.getElementById('apellido_m').value;
+            var correo = document.getElementById('correo').value;
+            var telefono = document.getElementById('telefono').value;
+            var rut = document.getElementById('rut').value;
+           /* var confirmar_correo = document.getElementById('confirmar_correo').value;
+            var confirmar_telefono = document.getElementById('confirmar_telefono').value;*/
+            var entrega_vehiculo = document.querySelector('input[name="entrega_vehiculo"]:checked').value;
+            var fecha = document.getElementById('fecha').value;
+            var horario = document.getElementById('horario').value;
+            
+
+            document.getElementById('resumen_patente').textContent = "Patente: " + patente;
+            document.getElementById('resumen_marca').textContent = "Marca: " + marca;
+            document.getElementById('resumen_vin').textContent = "VIN: " + vin;
+            document.getElementById('resumen_modelo').textContent = "Modelo: " + modelo;
+            document.getElementById('resumen_version').textContent = "Versión: " + version;
+            document.getElementById('resumen_año').textContent = "Año: " + año;
+            document.getElementById('resumen_kilometros').textContent = "Kilómetros: " + kilometros;
+            document.getElementById('resumen_mantenimiento').textContent = "Mantenimiento: " + mantenimiento;
+            document.getElementById('resumen_problema_adicional').textContent = "Problema Adicional: " + problema_adicional;
+            document.getElementById('resumen_nombre').textContent = "Nombre: " + nombre;
+            document.getElementById('resumen_apellido_p').textContent = "Apellido Paterno: " + apellido_p;
+            document.getElementById('resumen_apellido_m').textContent = "Apellido Materno: " + apellido_m;
+            document.getElementById('resumen_correo').textContent = "Correo Electrónico: " + correo;
+            document.getElementById('resumen_telefono').textContent = "Número: " + telefono;
+            document.getElementById('resumen_rut').textContent = "RUT: " + rut;
+            /*document.getElementById('resumen_confirmar_correo').textContent = "Confirmar Correo: " + confirmar_correo;
+            document.getElementById('resumen_confirmar_telefono').textContent = "Confirmar Número: " + confirmar_telefono;*/
+            document.getElementById('resumen_entrega_vehiculo').textContent = "Entregará el vehículo a otra persona en su nombre: " + entrega_vehiculo;
+            document.getElementById('resumen_fecha').textContent = "Fecha de Reserva: " + fecha;
+            document.getElementById('resumen_horario').textContent = "Horario de Atención: " + horario;
+        }
+    
+        function mostrarPagina3Anterior() {
+            document.getElementById('pagina4').style.display = 'none';
+            document.getElementById('pagina3').style.display = 'block';
+        }
+    </script>
+    
+</head>
+<body>
+    <section>
+        <h2>AGENDAMIENTO TALLER</h2>
+    </section>
+    <div class="container">
+        <form action="#" class="form">
+            <div class="pagina1" id="pagina1">
+                
+                <div class="campo1">
+                    <div class="label1">Ingresar Patente</div>
+                    <input type="text" id="patente" placeholder="ABC12">
+                </div>
+        
+                <div class="campo2">
+                    <div class="label">Marca</div>
+                    <input type="text" id="marca" placeholder="Ingrese la marca del vehículo">
+                </div>
+        
+                <div class="campo3">
+                    <div class="label">Vin del vehiculo</div>
+                    <input type="text" id="vin" placeholder="Ingresar codigo vehiculo">
+                </div>
+        
+                <div class="campo4">
+                    <div class="label">Modelo</div>
+                    <select id="modelo">
+                        <option value="-1" disabled selected>Seleccione una marca</option>
+                        <option value="audi">Audi</option>
+                        <option value="bmw">BMW</option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="ford">Ford</option>
+                        <option value="honda">Honda</option>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="mercedes">Mercedes-Benz</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="volkswagen">Volkswagen</option>
+                    </select>
+                </div>
+        
+                <div class="campo5">
+                    <div class="label">Versión</div>
+                    <input type="text" id="version" placeholder="Ingrese la versión">
+                </div>
+                <div class="campo6">
+                    <div class="label">Año</div>
+                    <input type="date" id="año" placeholder="Ingrese el año">
+                </div>
+                <div class="sc">
+                </div>
+                <button type="button" onclick="redireccionar()" class="btn1">Atras</button>
+                <button type="button" onclick="mostrarPagina2()" class="btn2">Siguiente</button>
+            </div><!---->
+    
+            <div class="pagina2" id="pagina2" style="display:none;">
+               <!-- <div class="campo7">
+                    <div class="label">Servicio Seleccionado: Mantención</div>
+                </div>-->
+
+                <div class="campo7">
+                    <div class="label">KM</div>
+                    <input type="text" id="kilometros" placeholder="Ingrese los kilómetros">
+                </div>
+
+                <div class="campo8">
+                    <div class="label">Mantenimiento a Agendar:</div>
+                    <input type="text" id="mantenimiento" placeholder="Ingrese el mantenimiento a agendar">
+                </div>
+
+                <div class="campo9">
+                    <div class="label">¿Tiene un problema adicional que desea revisar?</div>
+                    <input type="text" id="problema_adicional" placeholder="Ingrese el problema adicional">
+                </div>
+                <div class="ss"></div>
+                <button type="button" onclick="mostrarPagina1()" class="btn1">Atrás</button>
+                <button type="button" onclick="mostrarPagina3()" class="btn2">Siguiente</button>
+            </div><!---->
+    
+            <div class="pagina3" id="pagina3" style="display:none;">
+                <div class="campo10">
+                    <div class="label">Nombre</div>
+                    <input type="text" id="Nombres" placeholder="Ingrese su nombre">
+                </div>
+                <div class="campo11">
+                    <div class="label">Apellido Paterno</div>
+                    <input type="text" id="apellido_p" placeholder="Ingrese el apellido del dueño">
+                </div>
+                <div class="campo12">
+                    <div class="label">Apellido Materno</div>
+                    <input type="text" id="apellido_m" placeholder="Ingrese el apellido del dueño">
+                </div>
+            
+                <div class="campo13">
+                    <div class="label">Correo Electrónico</div>
+                    <input type="text" id="correo" placeholder="Ingrese el correo electrónico del dueño">
+                </div>
+            
+                <div class="campo14">
+                    <div class="label">Numero</div>
+                    <input type="text" id="telefono" placeholder="Ingrese el número telefónico del dueño">
+                </div>
+                <div class="campo15">
+                    <div class="label">RUT</div>
+                    <input type="text" id="rut" placeholder="Ingrese el RUT">
+                </div>
+                <div class="campo16">
+                    <div class="label">Confirmar Correo</div>
+                    <input type="text" id="confirmar_correo" placeholder="Confirme el correo electrónico del dueño">
+                </div>
+            
+                <div class="campo17">
+                    <div class="label">Confirmar Número</div>
+                    <input type="text" id="confirmar_telefono" placeholder="Confirme el número telefónico del dueño">
+                </div>
+            
+                <div class="campo18">
+                    <div class="label">¿Entregará el vehículo a otra persona en su nombre?</div>
+                    <input type="radio" name="entrega_vehiculo" value="si"> Sí
+                    <input type="radio" name="entrega_vehiculo" value="no"> No
+                </div>
+                <div class="titulo_p">Reserva de Horario</div>
+                <div class="campo19">
+                    <div class="label">Fecha</div>
+                    <input type="date" id="fecha" placeholder="Seleccione la fecha">
+                </div>
+                <div class="campo20">
+                    <div class="label">Horario de Atención</div>
+                    <select id="horario">
+                        <option value="-1" disabled selected>Seleccione un horario</option>
+                        <option value="9:00">9:30 AM</option>
+                        <option value="12:00">11:00 AM</option>
+                        <option value="14:00">14:00 PM</option>
+                        <option value="17:00">19:00 PM</option>
+                    </select>
+                </div>
+                <button type="button" onclick="mostrarPagina2Anterior()" class="btn1">Atrás</button>
+                <button type="button" onclick="mostrarPagina4()" class="btn2">Siguiente</button>
+            </div><!---->
+    
+            <div class="pagina4" id="pagina4" style="display:none;">
+                <div id="factura">Ticket De La Consulta</div>
+
+                <div id="resumen_patente"></div>
+                <div id="resumen_marca"></div>
+                <div id="resumen_vin"></div>
+                <div id="resumen_modelo"></div>
+                <div id="resumen_version"></div>
+                <div id="resumen_año"></div>
+                <div id="resumen_kilometros"></div>
+                <div id="resumen_mantenimiento"></div>
+                <div id="resumen_problema_adicional"></div>
+                <div id="resumen_nombre"></div>
+                <div id="resumen_apellido_p"></div>
+                <div id="resumen_apellido_m"></div>
+                <div id="resumen_correo"></div>
+                <div id="resumen_telefono"></div>
+                <div id="resumen_rut"></div>
+                <div id="resumen_entrega_vehiculo"></div>
+                <div id="resumen_fecha"></div>
+                <div id="resumen_horario"></div>
+
+                <button type="button" onclick="mostrarPagina3Anterior()" class="btn1">Atrás</button>
+                <button type="button" onclick="mostrarPagina8Anterior()" class="btn3">Enviar e Imprimir</button>
+            </div><!---->
+        </form>
+    </div>
+</body>
+</html>
